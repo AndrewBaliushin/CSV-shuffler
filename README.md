@@ -9,4 +9,4 @@ Date is from current date to date that was 90 days ago;
 Device id (col#2), Log message (col#4), Severity(col#5) are picked up randomly from source data;
 
 Usage example:
-python /csv_shufler/__init__.py source_file.csv 1000(lines in output file) output_file_name.csv
+python CsvShuffler source_file.csv 1000(lines in output file) output_file_name.csv
