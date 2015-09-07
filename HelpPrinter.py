@@ -1,6 +1,6 @@
 class HelpPrinter():
     """Print help file"""
-    helpFileName = "data/Help.md"
+    helpFileName = "data/README.md"
 
     @staticmethod
     def print_help():
