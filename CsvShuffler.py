@@ -8,7 +8,7 @@ from helpers.DateHelper import DateHelper
 
 
 def main():
-    if len(sys.argv) == 4 or len(sys.argv) == 6
+    if len(sys.argv) == 4 or len(sys.argv) == 6:
         path_to_original_csv = sys.argv[1]
         lines_in_output_file = int(sys.argv[2])
         output_file_path = sys.argv[3]
