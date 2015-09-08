@@ -1,8 +1,7 @@
-__author__ = 'andrew'
+__author__ = 'Andrey Baliushin'
 
 import csv
 import sets
-
 
 class CsvParser():
 

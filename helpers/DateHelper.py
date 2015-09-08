@@ -1,4 +1,4 @@
-__author__ = 'cpt2aba'
+__author__ = 'Andrey Baliushin'
 
 import calendar
 import random
@@ -11,7 +11,7 @@ class DateHelper():
 
     @staticmethod
     def add_date(start_date, days_to_add):
-        struct_time = datetime.datetime.strptime(start_date, "%Y-%m-%d %H:%M:%S")
+        struct_time = datetime.datetime.strptime(start_date, DateHelper.fmt)
         end_date = struct_time + datetime.timedelta(days=days_to_add)
         print(end_date)
 
@@ -36,10 +36,10 @@ class DateHelper():
         :return: list of dates where index[0] -- oldest date, [1] -- youngest date
         '''
         oldest_date = datetime.datetime.now()
-        youngest_date = datetime.datetime.strptime("1900-1-1 20:10:10", "%Y-%m-%d %H:%M:%S")
+        youngest_date = datetime.datetime.strptime("1900-1-1 20:10:10", DateHelper.fmt)
         for i, val in enumerate(date_list):
             if datetime.datetime.strptime(val, "%Y-%m-%d %H:%M:%S") < oldest_date:
-                oldest_date = datetime.datetime.strptime(val, "%Y-%m-%d %H:%M:%S")
-            if datetime.datetime.strptime(val, "%Y-%m-%d %H:%M:%S") > youngest_date:
-                youngest_date = datetime.datetime.strptime(val, "%Y-%m-%d %H:%M:%S")
+                oldest_date = datetime.datetime.strptime(val, DateHelper.fmt)
+            if datetime.datetime.strptime(val, DateHelper.fmt) > youngest_date:
+                youngest_date = datetime.datetime.strptime(val, DateHelper.fmt)
         return [oldest_date, youngest_date]
